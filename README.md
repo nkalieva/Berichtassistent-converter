@@ -1,19 +1,16 @@
-# Release Instructions
+# Berichtsassistent Converter
 
-```sh
-dotnet publish -c Release -r win-x64 --self-contained true /p:PublishSingleFile=true
-```
+A C# Windows Forms utility that converts Excel files from the old Berichtsassistent (BA1) format to the new Berichtsassistent 2 (BA2) format.
 
-wird verwendet, um das Projekt als ausführbare .exe-Datei zu erstellen, die:
+## What it does
+- Opens existing BA1 Excel workbooks
+- Detects and converts legacy formulas to the new BA2 formula syntax
+- Batch processing of multiple files
+- Simple Windows Forms UI for file selection and conversion
 
-• ohne installiertes .NET auf dem Zielsystem läuft (self-contained),
+## Technologies
+- **C# / .NET** — Windows Forms application
+- **Excel Interop** — reading and writing Excel files
 
-• in einer einzigen Datei verpackt ist (Single File Deployment),
-
-• für Windows 64-Bit (win-x64) vorgesehen ist,
-
-• im Release-Modus kompiliert wird – optimiert für die endgültige Nutzung.
-
-
-the output file is located at:
-`\bin\Release\net8.0-windows\win-x64\publish\Resave.exe`
+## Background
+Built to migrate existing client reports from the old system to Berichtsassistent 2 without manual rework.
